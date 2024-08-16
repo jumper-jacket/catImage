@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const btn = document.querySelector('#btn');
 const fetchImage = () => __awaiter(void 0, void 0, void 0, function* () {
     const res = yield fetch("https://api.thecatapi.com/v1/images/search");
     console.log(res);
@@ -32,3 +33,4 @@ const setBodyStyle = () => {
 };
 setBodyStyle();
 changeImage();
+btn.addEventListener('click', () => changeImage());

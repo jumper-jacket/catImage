@@ -5,6 +5,8 @@ type ImageProperties = {
     width: string,
 };
 
+const btn = document.querySelector('#btn') as HTMLElement;
+
 const fetchImage = async () :Promise<ImageProperties> => {
     const res = await fetch("https://api.thecatapi.com/v1/images/search")
     console.log(res);
@@ -33,3 +35,5 @@ const setBodyStyle = () => {
 setBodyStyle();
 
 changeImage();
+
+btn.addEventListener('click', ()=> changeImage());
